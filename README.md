@@ -1,2 +1,2 @@
 # Alexa_skill try
-# amazon 
+Skill to be published soon.
