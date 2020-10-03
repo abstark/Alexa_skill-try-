@@ -30,8 +30,8 @@ def homepage():
 
 @ask.launch
 def start_skill():
-    welcome_message = 'Hello there,would you name the food?'
-    return question(welcome_message)
+    welcome_intro_message = 'Hello there,would you name the food?'
+    return question(welcome_intro_message)
 
 @ask.intent("NoIntent")
 def no_intent():
@@ -44,8 +44,8 @@ def yes_intent():
 
 @ask.intent("AnswerIntent")
 def share_info(food):
-    info = get_info(food)
-    info_msg = 'The Item and the Brand names are'.format(info)
+    info_state = get_info(food)
+    info_msg = 'The Item and the Brand names are'.format(info_state)
     return statement(info_msg)
 
 if __name__ == '__main__':
